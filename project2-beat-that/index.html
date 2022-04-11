@@ -12,7 +12,7 @@ The <html> element is known as the root element of a HTML page. All other elemen
     <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
     <title>Basics</title>
     <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
   </head>
 
   <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
@@ -60,19 +60,28 @@ The <html> element is known as the root element of a HTML page. All other elemen
       </ul>
     </nav>
     <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
-    <h1 id="header">🚀 Basics Project 2: Beat That! 🚀</h1>
+    <h1 id="header">🚀 Basics Project 2 🚀</h1>
     <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
     <div class="container">
       <!-- The <p> tag defines a paragraph element. -->
-      <p>Input:</p>
+      <p><img src="https://fontmeme.com/permalink/220410/ff428276ab6b591481f00f00bef78fbf.png" alt="title image"><br></p>
+      
+      <p><br>🎮 <b><u>How To Play</u></b> 🎮<br><br>
+        Create a two-digit number by selecting the order of your dice rolls.<br>
+      The player with the highest number wins! Good luck!🍀</p></br>
+    </div>
+    <div class="inputbox">
+      <p><b>Input:</b></p>
       <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
       <input id="input-field" />
       <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
       <br />
       <!-- The <button> tag represents.. you guessed it! a button. -->
-      <button id="submit-button">Submit</button>
-      <p>Output:</p>
-      <div class="output-div" id="output-div"></div>
+      <button id="submit-button">Next</button>
+      <p><b>Output:</b></p>
+      <div class="output-div" id="output-div">
+        Welcome Player 1️⃣! Please click 'Next' to roll your dice🎲.
+      </div>
     </div>
     <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
     <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->

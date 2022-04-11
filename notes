@@ -1,0 +1,11 @@
+var rollDice = function () {
+  //Generate a decimal from 0 to 6, inclusive of 0 and exclusive of 6
+  var randomDecimal = Math.random() * 6;
+
+  //remove decimal with floor operation --> convert to integer between 0 to 5
+  var randomInteger = Math.floor(randomDecimal);
+
+  //add 1 to get valid dice rolls of 1 to 6 inclusive
+  var diceNumber = randomInteger + 1;
+  return diceNumber;
+

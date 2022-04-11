@@ -7,12 +7,20 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "superhelio_regular";
+  src: url("superhelrg-webfont.woff2") format("woff2"),
+    url("superhelrg-webfont.woff") format("woff");
+}
+
 body {
   margin-top: 0;
-  font-family: sans-serif;
+  font-family: "superhelio_regular", sans-serif;
   margin-left: 30px;
   margin-right: 30px;
-  background-color: #e0e0e0;
+  background-image: url("https://i.imgur.com/t453p0m.jpg");
+  background-size: cover;
+  background-color: #cccccc;
 }
 
 nav {
@@ -58,15 +66,26 @@ nav ul li a {
 
 .container {
   background-color: #ffffff;
+  font-size: 20px;
   margin: 40px auto;
   max-width: 800px;
   padding: 38px 31px;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
 }
 
+.inputbox {
+  background-color: #ffffff;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 38px 31px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 input {
-  font-size: 21px;
+  font-family: "superhelio_regular";
+  font-size: 18px;
   line-height: 33px;
   margin: 0 0 23px 0;
   padding: 0 9px;
@@ -74,17 +93,22 @@ input {
 }
 
 button {
-  font-size: 21px;
+  background-color: #e52521;
+  font-family: "superhelio_regular";
+  font-size: 18px;
   line-height: 33px;
   margin: 0 0 23px 0;
   padding: 0 6px;
+  border-radius: 20px;
+  color: white;
 }
 
 .output-div {
-  background-color: lightgrey;
+  background-color: #b8d8be;
   margin: 20px auto;
   padding: 20px;
   width: 100%;
+  border-radius: 30px;
 }
 
 hr {
