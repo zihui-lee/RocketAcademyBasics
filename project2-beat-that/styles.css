@@ -20,6 +20,7 @@ body {
   margin-right: 30px;
   background-image: url("https://i.imgur.com/t453p0m.jpg");
   background-size: cover;
+  overflow: scroll;
   background-color: #cccccc;
 }
 
@@ -77,6 +78,8 @@ nav ul li a {
 
 .inputbox {
   background-color: #ffffff;
+  overflow: hidden;
+  height: 380px;
   margin: 40px auto;
   max-width: 800px;
   padding: 38px 31px;
