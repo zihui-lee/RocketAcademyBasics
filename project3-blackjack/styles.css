@@ -7,12 +7,20 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "multicolore_proregular";
+  src: url("multicolore-pro.regular-webfont.woff2") format("woff2"),
+    url("multicolore-pro.regular-webfont.woff") format("woff");
+}
+
 body {
+  font-family: "multicolore_proregular";
   margin-top: 0;
   font-family: sans-serif;
   margin-left: 30px;
   margin-right: 30px;
-  background-color: #e0e0e0;
+  background-color: black;
+  overflow: scroll;
 }
 
 nav {
@@ -52,39 +60,254 @@ nav ul li a {
   text-decoration: none;
 }
 
+/*pop up*/
+#ac-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 6, 6, 0.562);
+  z-index: 1001;
+}
+
+#popup {
+  background-image: url("https://i.imgur.com/lGDf7Tr.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 600px;
+  box-shadow: blue 0px 0px 3px 3px;
+  -moz-box-shadow: blue 0px 0px 3px 3px;
+  -webkit-box-shadow: blue 0px 0px 3px 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  position: relative;
+  padding: 10px 60px;
+  margin-top: 520px;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  background-image: url("https://i.imgur.com/DQBPZZN.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 2px solid #001eff;
+  /* create a BIG glow */
+  box-shadow: 0px 0px 10px #001eff;
+  -moz-box-shadow: 0px 0px 10px #001eff;
+  -webkit-box-shadow: 0px 0px 10px #001eff;
+}
+
 #header {
   text-align: center;
 }
 
+.header-text {
+  content: url("https://i.imgur.com/OKev1sk.jpg");
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: auto;
+  padding: 10px, 10px, 10px, 10px;
+}
+
+.middle-text {
+  content: url("https://i.imgur.com/Af0efud.gif");
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: auto;
+}
 .container {
-  background-color: #ffffff;
+  background-image: url("https://i.imgur.com/9CJHv9h.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 800px;
   margin: 40px auto;
-  max-width: 800px;
   padding: 38px 31px;
+  text-align: center;
+  font-family: "multicolore_proregular";
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
-input {
-  font-size: 21px;
-  line-height: 33px;
-  margin: 0 0 23px 0;
-  padding: 0 9px;
-  width: 100%;
-}
-
-button {
-  font-size: 21px;
-  line-height: 33px;
-  margin: 0 0 23px 0;
-  padding: 0 6px;
-}
-
 .output-div {
-  background-color: lightgrey;
-  margin: 20px auto;
+  font-family: "multicolore_proregular";
+  background-color: black;
+  color: #ff005c;
+  margin: 200px auto 100px auto;
   padding: 20px;
+  width: 70%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid yellow;
+  /* create a BIG glow */
+  box-shadow: 0px 0px 10px yellow;
+  -moz-box-shadow: 0px 0px 10px yellow;
+  -webkit-box-shadow: 0px 0px 10px yellow;
+}
+
+#start-button {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  background-image: url("https://i.imgur.com/W3E7jsq.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid #001eff;
+  /* create a BIG glow */
+  box-shadow: 0px 0px 10px #001eff;
+  -moz-box-shadow: 0px 0px 10px #001eff;
+  -webkit-box-shadow: 0px 0px 10px #001eff;
+}
+
+#hit-button {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  background-image: url("https://i.imgur.com/BUHPH5k.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid #001eff;
+  /* create a BIG glow */
+  box-shadow: 0px 0px 10px #001eff;
+  -moz-box-shadow: 0px 0px 10px #001eff;
+  -webkit-box-shadow: 0px 0px 10px #001eff;
+}
+
+#stand-button {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  background-image: url("https://i.imgur.com/lu8I9CT.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px;
+  border: 2px solid #001eff;
+  /* create a BIG glow */
+  box-shadow: 0px 0px 10px #001eff;
+  -moz-box-shadow: 0px 0px 10px #001eff;
+  -webkit-box-shadow: 0px 0px 10px #001eff;
+}
+
+/*results pop up*/
+#ac-wrapper-win-result {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(7, 6, 6, 0.562);
+  z-index: 1001;
+}
+
+#popupWin {
+  background-image: url("https://i.imgur.com/HvckjHm.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 1000px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ac-wrapper-lose-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 6, 6, 0.562);
+  z-index: 1001;
+}
+#popupLose {
+  background-image: url("https://i.imgur.com/BqmzI7v.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 1000px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ac-wrapper-tie-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 6, 6, 0.562);
+  z-index: 1001;
+}
+#popupTie {
+  background-image: url("https://i.imgur.com/Bdul0Yb.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 1000px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.results-btn {
+  position: relative;
+  padding: 10px 60px;
+  margin-top: 250px;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  background-image: url("https://i.imgur.com/D9tWfbj.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 2px solid #b026ff;
+  /* create a BIG glow */
+  box-shadow: 0px 0px 10px#B026FF;
+  -moz-box-shadow: 0px 0px 10px #b026ff;
+  -webkit-box-shadow: 0px 0px 10px #b026ff;
 }
 
 hr {

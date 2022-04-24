@@ -60,19 +60,81 @@ The <html> element is known as the root element of a HTML page. All other elemen
       </ul>
     </nav>
     <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
-    <h1 id="header">🚀 Basics Project 3: Blackjack 🚀</h1>
+
+    <!---pop up image upon loading-->
+    <div id="ac-wrapper" style="display: none;">
+      <div id="popup">
+        <center>
+          <button
+            class="btn"
+            type="submit"
+            name="submit"
+            value="Submit"
+            onClick="PopUp('hide')"
+          ></button>
+        </center>
+      </div>
+    </div>
+    <!--to insert header image-->
+    <div class="header-text"></div>
+
+    <div class="middle-text"></div>
+
     <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
     <div class="container">
-      <!-- The <p> tag defines a paragraph element. -->
-      <p>Input:</p>
-      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
-      <input id="input-field" />
-      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
-      <br />
-      <!-- The <button> tag represents.. you guessed it! a button. -->
-      <button id="submit-button">Submit</button>
-      <p>Output:</p>
-      <div class="output-div" id="output-div"></div>
+      <div class="output-div" id="output-div">
+        CLICK THE 'START' BUTTON TO START
+      </div>
+      <div class="buttons">
+        <button type="submit" id="start-button"></button>
+        <button type="submit" id="hit-button"></button>
+        <button type="submit" id="stand-button"></button>
+      </div>
+    </div>
+
+    <!---pop up showing winning results-->
+    <div id="ac-wrapper-win-result" style="display: none;">
+      <div id="popupWin">
+        <center>
+          <button
+            class="results-btn"
+            type="submit"
+            name="submit"
+            value="Submit"
+            onClick="PopUpWinResult('hide')"
+          ></button>
+        </center>
+      </div>
+    </div>
+
+    <!---pop up showing losing results-->
+    <div id="ac-wrapper-lose-result" style="display: none;">
+      <div id="popupLose">
+        <center>
+          <button
+            class="results-btn"
+            type="submit"
+            name="submit"
+            value="Submit"
+            onClick="PopUpLoseResult('hide')"
+          ></button>
+        </center>
+      </div>
+    </div>
+
+    <!---pop up showing tie results-->
+    <div id="ac-wrapper-tie-result" style="display: none;">
+      <div id="popupTie">
+        <center>
+          <button
+            class="results-btn"
+            type="submit"
+            name="submit"
+            value="Submit"
+            onClick="PopUpTieResult('hide')"
+          ></button>
+        </center>
+      </div>
     </div>
     <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
     <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
@@ -80,23 +142,58 @@ The <html> element is known as the root element of a HTML page. All other elemen
     <script src="script.js"></script>
     <!-- Define button click functionality -->
     <script>
-      // Declare and define a variable that represents the Submit Button
-      var button = document.querySelector("#submit-button");
-      // When the submit button is clicked, access the text entered by the user in the input field
-      // And pass it as an input parameter to the main function as defined in script.js
-      button.addEventListener("click", function () {
-        // Set result to input value
-        var input = document.querySelector("#input-field");
-        // Store the output of main() in a new variable
-        var result = main(input.value);
-
-        // Display result in output element
+      // Declare and define a variable that represents the Button
+      var startButton = document.querySelector("#start-button");
+      // add event listener
+      startButton.addEventListener("click", function () {
+        var result = main("start");
+        //display results in output element
         var output = document.querySelector("#output-div");
         output.innerHTML = result;
-
-        // Reset input value
-        input.value = "";
+        //disable start button after the game has started
+        document.getElementById("start-button").disabled = true;
       });
+      var hitButton = document.querySelector("#hit-button");
+      // add event listener
+      hitButton.addEventListener("click", function () {
+        var result = main("hit");
+        //display results in output element
+        var output = document.querySelector("#output-div");
+        output.innerHTML = result;
+      });
+      var standButton = document.querySelector("#stand-button");
+      // add event listener
+      standButton.addEventListener("click", function () {
+        var result = main("stand");
+        //display results in output element
+        var output = document.querySelector("#output-div");
+        output.innerHTML = result;
+      });
+      var standButton = document.querySelector("#stand-button");
+      // add event listener
+      standButton.addEventListener("dblclick", function () {
+        var result = main("compare");
+        //display results in output element
+        var output = document.querySelector("#output-div");
+        output.innerHTML = result;
+      });
+
+      //var button = document.querySelector("#submit-button");
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+
+      //button.addEventListener("click", function () {
+      // Set result to input value
+      //var input = document.querySelector("#input-field");
+      // Store the output of main() in a new variable
+      //var result = main(input.value);
+
+      // Display result in output element
+      //var output = document.querySelector("#output-div");
+      //output.innerHTML = result;
+
+      // Reset input value
+      //input.value = "";
     </script>
   </body>
 </html>
