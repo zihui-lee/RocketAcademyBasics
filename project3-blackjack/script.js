@@ -18,7 +18,7 @@ window.onload = function () {
 };
 
 //game mode
-var gameMode = "";
+var gameMode = "default";
 
 //player and computer's hand
 var playerHand = [];
@@ -228,6 +228,7 @@ var main = function (input) {
     //calculate player's hand value
     var currPlayerHandValue = calculateHandValue(playerHand);
     console.log(playerHand, currPlayerHandValue);
+    console.log(gameMode);
 
     //output value as player's cards
     myOutputValue = `You have drawn ${outputPlayerHandFX(playerHand)}.<br>

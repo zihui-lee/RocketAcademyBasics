@@ -142,6 +142,9 @@ The <html> element is known as the root element of a HTML page. All other elemen
     <script src="script.js"></script>
     <!-- Define button click functionality -->
     <script>
+      //why are hit and stand buttons still disabled after pressing 'start'?
+      document.getElementById("hit-button").disabled = true;
+      document.getElementById("stand-button").disabled = true;
       // Declare and define a variable that represents the Button
       var startButton = document.querySelector("#start-button");
       // add event listener
@@ -152,6 +155,8 @@ The <html> element is known as the root element of a HTML page. All other elemen
         output.innerHTML = result;
         //disable start button after the game has started
         document.getElementById("start-button").disabled = true;
+        document.getElementById("hit-button").disabled = false;
+        document.getElementById("stand-button").disabled = false;
       });
       var hitButton = document.querySelector("#hit-button");
       // add event listener
